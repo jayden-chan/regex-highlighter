@@ -43,11 +43,11 @@ function computeHighlighting(code: string) {
     // true/false
     {
       regex: /(true|false)/g,
-      template: color('#B16286', 1),
+      template: color('#D3869B', 1),
     },
-    // import export stuff
+    // some keywords
     {
-      regex: /(import |export |from)/g,
+      regex: /(import |export |from|throw )/g,
       template: color('#FE8019', 1),
     },
     // import as (thing)
@@ -62,8 +62,25 @@ function computeHighlighting(code: string) {
     },
     // other keywords
     {
-      regex: /(async |await |return |type |interface |if |else |default )/g,
+      regex: /(async |await |return |type |else |default )/g,
       template: color('#FB4934', 1),
+    },
+    {
+      regex: /(if\s?)(\()/g,
+      template: `${color('#FB4934', 1)}$2`,
+    },
+    {
+      regex: /(try\s?)(\{)/g,
+      template: `${color('#FE8019', 1)}$2`,
+    },
+    {
+      regex: /(catch\s?)((\(\w+\)\s?)?\{)/g,
+      template: `${color('#FE8019', 1)}$2$3`,
+    },
+    // types / interfaces
+    {
+      regex: /(type|interface )(\w+)/g,
+      template: `${color('#FB4934', 1)}${color('#83A598', 2)}`,
     },
     // function calls
     {

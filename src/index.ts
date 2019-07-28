@@ -26,12 +26,14 @@ if (language === '--escape') {
   console.log(escapeHtml(readFileSync(file).toString()));
 }
 
+let engine;
 switch (language.toLowerCase()) {
   case 'typescript':
-    const {highlighter} = require('./languages/typescript.js');
-    console.log(highlighter(escapeHtml(readFileSync(file).toString())));
+    engine = require('./languages/typescript.js');
     break;
   default:
     console.error('Error: language not supported');
     process.exit(1);
 }
+
+console.log(engine.highlighter(escapeHtml(readFileSync(file).toString())));
