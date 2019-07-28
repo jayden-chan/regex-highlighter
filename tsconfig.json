@@ -1,0 +1,11 @@
+{
+  "include": ["src/**/*.ts"],
+  "compilerOptions": {
+    "module": "commonjs",
+    "sourceMap": false,
+    "outDir": "dist",
+    "resolveJsonModule": true,
+    "strict": true,
+    "removeComments": true
+  }
+}

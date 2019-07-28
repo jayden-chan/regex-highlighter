@@ -1,0 +1,19 @@
+{
+  "name": "regex-highlighter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "author": "Jayden Chan <jaydencn7@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^12.6.8",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "commander": "^2.20.0"
+  }
+}
