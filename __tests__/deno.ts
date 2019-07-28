@@ -1,3 +1,9 @@
+/* I did not write this code, it is part of the deno std library
+ *
+ * https://github.com/denoland/deno_std/blob/b04fda30c8949b6347094b898bfa427c0b9a6162/fs/copy.ts
+ *
+ */
+
 // Copyright 2018-2019 the Deno authors. All rights reserved. MIT license.
 import * as path from './path/mod.ts';
 import {ensureDir, ensureDirSync} from './ensure_dir.ts';
