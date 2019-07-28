@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
   "author": "Jayden Chan <jaydencn7@gmail.com>",
   "license": "MIT",
@@ -13,7 +14,5 @@
     "@types/node": "^12.6.8",
     "typescript": "^3.5.3"
   },
-  "dependencies": {
-    "commander": "^2.20.0"
-  }
+  "dependencies": {}
 }
